@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Sahil Tulani</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Relative positioning for floating elements */
+  }
+  .header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .header h1 .first-part {
+    color: #ffffff; /* White color for "I Am S" */
+  }
+  .header h1 .second-part {
+    background: linear-gradient(90deg, #ff7e00, #ff9500);
+    -webkit-background-clip: text;
+    color: transparent; /* Gradient for "ahil Tulani" */
+  }
+  .header .sub-text {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .main-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .main-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-out;
+  }
+  .main-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    animation: slideInUp 1s ease-out;
+  }
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slideInUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+  }
+  .footer p {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+  }
+
+  /* Button container and styling */
+  .button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* spacing between buttons */
+  }
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7e00;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px; /* Ensure rectangular shape */
+    height: 50px; /* Consistent height */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  .button-container button:hover {
+    background-color: #ff9500;
+    transform: scale(1.05);
+  }
+
+/* Floating elements */
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite alternate;
+  opacity: 0.6;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.floating-element-1 {
+  width: 20px;
+  height: 20px;
+  background-color: #ff7e00;
+  top: 5%;
+  left: 10%;
+}
+.floating-element-2 {
+  width: 30px;
+  height: 30px;
+  background-color: #ff7e00;
+  top: 25%;
+  left: 20%;
+}
+.floating-element-3 {
+  width: 40px;
+  height: 40px;
+  background-color: #ff7e00;
+  top: 45%;
+  left: 30%;
+}
+.floating-element-4 {
+  width: 20px;
+  height: 20px;
+  background-color: #ff7e00;
+  top: 15%;
+  right: 10%;
+}
+.floating-element-5 {
+  width: 30px;
+  height: 30px;
+  background-color: #ff7e00;
+  top: 35%;
+  right: 20%;
+}
+.floating-element-6 {
+  width: 40px;
+  height: 40px;
+  background-color: #ff7e00;
+  top: 55%;
+  right: 30%;
+}
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Media Queries for Floating Elements on Mobile */
+@media (max-width: 768px) {
+  .floating-element-1 {
+    width: 18px;
+    height: 18px;
+    top: 8%;
+    left: 12%;
+  }
+  .floating-element-2 {
+    width: 28px;
+    height: 28px;
+    top: 28%;
+    left: 18%;
+  }
+  .floating-element-3 {
+    width: 38px;
+    height: 38px;
+    top: 48%;
+    left: 28%;
+  }
+  .floating-element-4 {
+    width: 18px;
+    height: 18px;
+    top: 18%;
+    right: 12%;
+  }
+  .floating-element-5 {
+    width: 28px;
+    height: 28px;
+    top: 38%;
+    right: 22%;
+  }
+  .floating-element-6 {
+    width: 38px;
+    height: 38px;
+    top: 58%;
+    right: 32%;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-element-1 {
+    width: 15px;
+    height: 15px;
+    top: 10%;
+    left: 15%;
+  }
+  .floating-element-2 {
+    width: 25px;
+    height: 25px;
+    top: 30%;
+    left: 15%;
+  }
+  .floating-element-3 {
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    left: 25%;
+  }
+  .floating-element-4 {
+    width: 15px;
+    height: 15px;
+    top: 20%;
+    right: 15%;
+  }
+  .floating-element-5 {
+    width: 25px;
+    height: 25px;
+    top: 40%;
+    right: 25%;
+  }
+  .floating-element-6 {
+    width: 35px;
+    height: 35px;
+    top: 60%;
+    right: 35%;
+  }
+}
+
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 36px;
+    }
+    .main-section h2 {
+      font-size: 24px;
+    }
+    .main-section p {
+      font-size: 16px;
+    }
+    .button-container button {
+      padding: 10px 16px; /* Adjust padding for medium screens */
+      font-size: 16px;
+      width: 180px; /* Slightly smaller width */
+      height: 45px; /* Adjust height for mobile-like screens */
+    }
+  }
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 28px;
+    }
+    .main-section h2 {
+      font-size: 20px;
+    }
+    .main-section p {
+      font-size: 14px;
+    }
+    .button-container {
+      flex-direction: column;
+      align-items: center; /* Ensure buttons are centered in column layout */
+    }
+    .button-container button {
+      width: 100%;
+      max-width: 200px; /* Max width for mobile screens */
+      padding: 10px 20px;
+      font-size: 14px;
+      height: 45px; /* Fix the button height for mobile */
+    }
+    .header img {
+      width: 100px;
+      height: 100px;
+    }
+    .footer {
+      padding: 10px 0;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <img src="Sahil.jpg" alt="Sahil Tulani">
+    <h1><span class="first-part">Hi I'M S</span><span class="second-part">ahil Tulani</span></h1>
+    <div class="sub-text">Studying BCA from PGGC 11, Chd<br>Passing out in May 2025</div>
+  </div>
+  <div class="main-section">
+    <div class="button-container">
+      <button onclick="location.href='index.html'" id="redirectButton">Home</button>
+      <button onclick="location.href='education.html'" id="redirectButton">Education and Skills</button>
+      <button onclick="location.href='experience.html'" id="redirectButton">Experience</button>
+      <button onclick="location.href='projects.html'" id="redirectButton">Project Work</button>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Your Portfolio Site</p>
+    <p>Email: tulanisahil1@gmail.com</p>
+    <p>Contact: 9988412462</p>
+    <p>&copy; 2024 Sahil Tulani. All rights reserved.</p>
+  </div>
+  <!-- Floating elements -->
+  <div class="floating-element floating-element-1"></div>
+  <div class="floating-element floating-element-2"></div>
+  <div class="floating-element floating-element-3"></div>
+  <div class="floating-element floating-element-4"></div>
+  <div class="floating-element floating-element-5"></div>
+  <div class="floating-element floating-element-6"></div>
+</body>
+<script>
+  const button = document.getElementById('redirectButton');
+  button.addEventListener('click', (e) => {
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+      window.location.href = 'page2.html';
+    }, 500); // Match the duration of the fade-out effect
+  });
+</script>
+</html>
